@@ -1,16 +1,34 @@
 .about  {
   padding: 120px 0;
 
+  @include vp-1023  {
+    padding: 80px 0;
+  }
+
   &__list {
     @include list-reset;
     margin: 0 0 120px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
+
+    @include vp-1023  {
+      margin: 0 auto 80px;
+      width: 73%;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__item {
     max-height: 600px;
+    &--hidden {
+      @include vp-1023  {
+        display: none;
+      }
+    }
+    @include vp-1023  {
+      max-height: 350px;
+    }
   }
 
   &__picture  {
@@ -21,7 +39,7 @@
   }
 
   &__img  {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
@@ -33,11 +51,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
     border: 1px solid $color-fallow;
     border-bottom: none;
     border-top-left-radius: 600px;
     border-top-right-radius: 600px;
+
+    @include vp-1023  {
+      padding: 39px 0;
+    }
 
   }
 
@@ -45,6 +66,13 @@
     width: 110px;
     height: 146px;
     margin: 0 0 30px;
+    flex-shrink: 0;
+
+    @include vp-1023  {
+      width: 70px;
+      height: 94px;
+      margin: 0 0 20px;
+    }
   }
 
   &__name {
@@ -52,6 +80,12 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin: 0 0 40px;
+
+    @include vp-1023  {
+      gap: 5px;
+      margin: 0 0 20px;
+    }
   }
 
   &__name-small {
@@ -62,6 +96,11 @@
     text-transform: uppercase;
     color: $color-fallow;
     text-align: center;
+
+    @include vp-1023  {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__name-big {
@@ -72,6 +111,11 @@
     letter-spacing: -0.08em;
     text-align: center;
     text-transform: uppercase;
+
+    @include vp-1023  {
+      font-size: 28px;
+      line-height: 32px;
+    }
   }
 
   &__location{
@@ -79,12 +123,20 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    @include vp-1023  {
+      gap: 10px;
+    }
   }
 
   &__pin  {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
+
+    @include vp-1023  {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__location-text  {
@@ -92,6 +144,11 @@
     line-height: 26px;
     letter-spacing: 0;
     text-align: center;
+
+    @include vp-1023  {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__title  {
@@ -105,5 +162,11 @@
     text-transform: uppercase;
     text-align: center;
     color: $color-fallow;
+
+    @include vp-1023  {
+      width: 90%;
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 }
