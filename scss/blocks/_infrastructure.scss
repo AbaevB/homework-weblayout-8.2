@@ -1,0 +1,50 @@
+.infrastructure {
+  padding: 120px 0 120px;
+
+  &__inner  {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 168px;
+  }
+
+  &__left {
+    padding: 120px 0 120px;
+  }
+
+  &__text {
+    display: block;
+    margin: 0 0 30px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__list {
+    @include list-reset;
+    columns: 2;
+    column-gap: 44px;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 0 0 0 16px;
+
+    &:not(:last-child)  {
+      margin: 0 0 15px;
+    }
+
+    &::before{
+      @include pseudo;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: $color-fallow;
+      top: 5px;
+      left: 0;
+    }
+  }
+
+
+
+}
