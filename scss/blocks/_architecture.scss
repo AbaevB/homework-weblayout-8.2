@@ -1,0 +1,147 @@
+.architecture {
+  padding-bottom: 146px;
+
+  @include vp-1023  {
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 60px;
+  }
+
+  &__top  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 40px;
+
+    @include vp-1023  {
+      margin: 0 0 20px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 15px;
+      margin: 0 0 40px;
+    }
+  }
+
+  &__title  {
+    margin: 0;
+    width: calc(100% / 3);
+    font-weight: 400;
+    font-family: $ff-tenor;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    color: $color-fallow;
+
+    @include vp-1023  {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @include vp-1023  {
+      width: 100%;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+
+  &__descr  {
+    margin: 0;
+    width: calc(100% / 3);
+    font-size: 18px;
+    line-height: 26px;
+
+    @include vp-1023  {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      text-align: center
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    gap: 84px;
+
+    @include vp-1023 {
+      gap: 19px;
+    }
+
+    @include vp-767 {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    width: calc((100% - (84px * 2)) / 3);
+
+    @include vp-1023  {
+      width: calc((100% - (19px * 2)) / 3);
+    }
+
+    @include vp-767 {
+      min-width: 160px;
+    }
+  }
+
+  &__picture  {
+    width: 100%;
+    margin: 0 0 20px;
+    border-bottom-left-radius: 600px;
+    border-bottom-right-radius: 600px;
+    overflow: hidden;
+
+    &--even {
+      border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 600px;
+    border-top-right-radius: 600px;
+    }
+
+    /*@include vp-767 {
+      min-height: 285px;
+    }*/
+
+  }
+
+  &__img  {
+    width: 100%;
+    /*height: 100%;*/
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__item-title {
+    font-family: $ff-tenor;
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-fallow;
+
+    @include vp-1023  {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+}
