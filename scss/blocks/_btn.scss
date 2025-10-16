@@ -1,0 +1,23 @@
+.btn  {
+  padding: 17px 42px;
+  background-color: transparent;
+  border: 1px solid $color-fallow;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-fallow;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &:hover {
+    color: $color-rustic-red;
+    background-color: $color-fallow;
+  }
+
+  &:focus-visible {
+    color: $color-rustic-red;
+    background-color: $color-fallow;
+  }
+}
