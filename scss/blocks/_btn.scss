@@ -20,4 +20,10 @@
     color: $color-rustic-red;
     background-color: $color-fallow;
   }
+
+  @include vp-1023  {
+    padding: 15px 36px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
