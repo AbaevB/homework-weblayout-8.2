@@ -78,8 +78,12 @@
 
     @include vp-767 {
       flex-wrap: nowrap;
-      overflow-x: scroll;
+      overflow: auto;
       gap: 10px;
+
+      &::-webkit-scrollbar  {
+        display: none;
+      }
     }
   }
 
