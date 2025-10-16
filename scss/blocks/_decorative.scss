@@ -1,0 +1,49 @@
+.decorative {
+  min-height: 500px;
+  background-image: url('../../images/decorative-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../../images/decorative-bg@2x.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+
+
+  @include vp-1023  {
+    min-height: 280px;
+    background-image: url('../../images/decorative-bg-tablet.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+    background-image: url('../../images/decorative-bg-tablet@2x.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+  }
+
+
+  @include vp-767 {
+    min-height: 200px;
+    background-image: url('../../images/decorative-bg-mobile.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+    background-image: url('../../images/decorative-bg-mobile@2x.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+  }
+
+}
