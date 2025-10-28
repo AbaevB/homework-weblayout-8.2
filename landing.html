@@ -40,25 +40,22 @@
   </header>
   <main>
     <section class="hero">
-      <picture class="hero__picture">
-        <source media="(max-width: 768px)" srcset="images/hero-img-mobile.jpg, images/hero-img-mobile@2x.jpg 2x">
-        <source media="(max-width: 1023px)" srcset="images/hero-img-tablet.jpg 1x, images/hero-img-mobile@2x.jpg 2x">
-        <img class="hero__image" src="images/hero-img.jpg " alt="Фрунзенская набережная" srcset="images/hero-img@2x.jpg 2x">
-
-      </picture>
-
-
+      <div class="hero__inner">
         <h1 class="visually-hidden">
           Клубный квартал Фрунзенская набережная
         </h1>
+        <picture class="hero__picture">
+          <source media="(max-width: 768px)" srcset="images/hero-img-mobile.jpg, images/hero-img-mobile@2x.jpg 2x">
+          <source media="(max-width: 1023px)" srcset="images/hero-img-tablet.jpg, images/hero-img-tablet@2x.jpg 2x">
+          <img class="hero__image" src="images/hero-img.jpg " alt="Фрунзенская набережная" srcset="images/hero-img@2x.jpg 2x">
+        </picture>
+      </div>
 
-          <p class="hero__text">
-            Элитный клубный город-парк в&nbsp;москве
-          </p>
-
-
+      <p class="hero__text">
+        Элитный клубный город-парк в&nbsp;москве
+      </p>
     </section>
-    <section class="about">
+    <!--<section class="about">
       <div class="container">
         <ul class="about__list">
           <li class="about__item">
@@ -105,7 +102,7 @@
 
       </div>
     </section>
-    <section class="cover">
+    <!--<section class="cover">
       <div class="container">
         <h2 class="visually-hidden">
           Вид на Фрунзенскую набережную со стороы Москва-реки
@@ -353,7 +350,7 @@
           Фрунзенская набережная интерьер - ресепшн
         </h2>
       </div>
-    </section>
+    </section>-->
   </main>
   <footer class="footer">
     <div class="container">
