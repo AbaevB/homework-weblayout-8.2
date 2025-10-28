@@ -1,21 +1,12 @@
 .about  {
-  margin: 0 0 120px;
-  padding-top: 120px;
+  padding: 120px 0;
 
   @include vp-1023  {
-    margin: 0 0 80px;
-    padding-top: 80px;
+    padding: 80px 0;
   }
 
   @include vp-767 {
-    mmb: 60px;
-    padding-top: 152px;
-  }
-
-  &__inner  {
-    display: flex;
-    flex-direction: column;
-    align-items: center
+    padding: 152px 0 60px;
   }
 
   &__list {
@@ -27,12 +18,12 @@
 
     @include vp-1023  {
       margin: 0 auto 80px;
-      width: 532px;
+      width: 73%;
       grid-template-columns: repeat(2, 1fr);
     }
 
     @include vp-767 {
-      width: 220px ;
+      min-width: 220px ;
       grid-template-columns:  1fr;
       margin: 0 auto 60px;
     }
@@ -55,10 +46,39 @@
     }
   }
 
+  &__picture  {
+    height: 100%;
+    border-bottom-left-radius: 600px;
+    border-bottom-right-radius: 600px;
+    overflow: hidden;
+  }
+
   &__img  {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  &__content  {
+    width: 100%;
+    height: 100%;
+    padding: 92px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $color-fallow;
+    border-bottom: none;
+    border-top-left-radius: 600px;
+    border-top-right-radius: 600px;
+
+    @include vp-1023  {
+      padding: 39px 0;
+    }
+
+    @include vp-767 {
+      padding: 25px 0;
+    }
+
   }
 
   &__icon {
@@ -94,11 +114,9 @@
     }
 
     @include vp-767 {
-      gap: 9px;
       margin: 0 0 15px;
     }
   }
-
 
   &__name-small {
     font-weight: 400;
@@ -148,10 +166,6 @@
     @include vp-1023  {
       gap: 10px;
     }
-
-    @include vp-767 {
-      gap: 5px;
-    }
   }
 
   &__pin  {
@@ -180,8 +194,8 @@
   }
 
   &__title  {
-    width: 65%;
-    margin: 0;
+    width: 80%;
+    margin: 0 auto;
     font-family: $ff-tenor;
     font-weight: 400;
     font-size: 34px;
@@ -203,5 +217,4 @@
       line-height: 24px;
     }
   }
-
 }
