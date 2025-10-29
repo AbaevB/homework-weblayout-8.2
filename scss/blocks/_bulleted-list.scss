@@ -1,0 +1,27 @@
+.bulleted-list  {
+  margin: 0;
+  padding-inline-start: 20px;
+  color: $color-fallow;
+
+  &__item {
+    &:not(:last-child){
+      margin: 0 0 15px;
+
+      @include vp-1023  {
+        margin: 0 0 10px;
+      }
+    }
+  }
+
+  &__text {
+    color: $color-white;
+    font-size: 18px;
+    line-height: 20px;
+
+    @include vp-1023  {
+      font-size: 14px;
+      line-height: 20px;
+
+    }
+  }
+}
