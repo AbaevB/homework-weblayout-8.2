@@ -1,6 +1,6 @@
 .bulleted-list  {
   margin: 0;
-  padding-inline-start: 20px;
+  padding-inline-start: 17px;
   color: $color-fallow;
 
   &__item {
@@ -16,7 +16,7 @@
   &__text {
     color: $color-white;
     font-size: 18px;
-    line-height: 20px;
+    line-height: 26px;
 
     @include vp-1023  {
       font-size: 14px;
