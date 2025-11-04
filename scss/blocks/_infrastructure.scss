@@ -7,6 +7,13 @@
     padding-top: 80px;
   }
 
+  @include vp-767 {
+    margin: 0 0 60px;
+    padding-top: 60px;
+  }
+
+
+
   &__inner {
     display: grid;
     grid-template-columns: 1fr 400px;
@@ -16,6 +23,10 @@
       display: flex;
       flex-direction: column;
       gap: 80px;
+    }
+
+    @include vp-767 {
+      gap: 60px;
     }
   }
 
@@ -40,6 +51,10 @@
       font-size: 14px;
       line-height: 20px;
     }
+
+    @include vp-767 {
+      margin: 0 0 15px;
+    }
   }
 
   &__bulleted-list {
@@ -48,6 +63,10 @@
 
     @include vp-1023 {
       column-gap: 74px;
+    }
+
+    @include vp-767 {
+      columns: unset;
     }
   }
 
@@ -75,6 +94,12 @@
       align-items: start;
       gap: 40px;
     }
+
+    @include vp-767 {
+      width: 280px;
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
   }
 
   &__list-item {
@@ -83,6 +108,14 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
+
+    @include vp-767 {
+      gap: 0;
+      width: 120px;
+    }
+
+
 
     &--icon-top {
       width: 150px;
@@ -94,30 +127,64 @@
 
       }
 
+      @include vp-767 {
+        width: 120px;
+        padding-top: 40px;
+      }
+
       .infrastructure__list-icon {
         @include vp-1023 {
           margin: 0 0 20px;
+        }
+
+        @include vp-767 {
+          margin: 0 0 10px;
         }
       }
 
       .infrastructure__list-title {
         margin: 0 0 10px;
+
+        @include vp-767 {
+          margin: 0;
+        }
       }
     }
 
 
     &--icon-bottom  {
+
+      @include vp-767 {
+        padding-bottom: 20px;
+      }
+
       .infrastructure__list-text  {
         margin: 0 0 10px;
       }
     }
 
+
     &:last-child  {
       padding-top: 80px;
+
+      @include vp-767 {
+        padding: 0;
+        gap: 5px;
+      }
 
       .infrastructure__list-small {
         line-height: 40px;
       }
+    }
+
+    &:first-child {
+      @include vp-767 {
+        padding-top: 90px;
+        gap: 0;
+      }
+
+
+
     }
 
   }
@@ -145,6 +212,11 @@
     @include vp-1023 {
       font-size: 40px;
     }
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
 
   &__list-small {
@@ -171,6 +243,8 @@
       font-size: 14px;
       line-height: 20px;
     }
+
+
   }
 
   &__list-icon {
