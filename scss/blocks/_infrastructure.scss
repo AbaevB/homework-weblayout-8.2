@@ -2,14 +2,31 @@
   margin: 0 0 120px;
   padding-top: 120px;
 
-  &__inner  {
+  @include vp-1023 {
+    margin: 0 0 80px;
+    padding-top: 80px;
+  }
+
+  &__inner {
     display: grid;
     grid-template-columns: 1fr 400px;
     gap: 168px;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
   }
 
+
+
   &__left {
-    padding: 162px 0 ;
+    padding: 162px 0;
+
+    @include vp-1023 {
+      padding: 0;
+    }
   }
 
   &__text {
@@ -17,11 +34,29 @@
     margin: 0 0 30px;
     font-size: 18px;
     line-height: 26px;
+
+    @include vp-1023 {
+      margin: 0 0 20px;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
-  &__bulleted-list  {
+  &__bulleted-list {
     columns: 2;
     column-gap: 44px;
+
+    @include vp-1023 {
+      column-gap: 74px;
+    }
+  }
+
+  .arc {
+    @include vp-1023 {
+      border-radius: unset;
+      padding: 0;
+      border: none;
+    }
   }
 
 
@@ -32,13 +67,59 @@
     align-items: center;
     gap: 60px;
     max-width: 200px;
+
+    @include vp-1023 {
+      max-width: unset;
+      width: 100%;
+      flex-direction: row;
+      align-items: start;
+      gap: 40px;
+    }
   }
 
-  &__list-item  {
+  &__list-item {
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
+    &--icon-top {
+      width: 150px;
+      padding-top: 20px;
+
+      @include vp-1023 {
+        width: 155px;
+        gap: unset;
+
+      }
+
+      .infrastructure__list-icon {
+        @include vp-1023 {
+          margin: 0 0 20px;
+        }
+      }
+
+      .infrastructure__list-title {
+        margin: 0 0 10px;
+      }
+    }
+
+
+    &--icon-bottom  {
+      .infrastructure__list-text  {
+        margin: 0 0 10px;
+      }
+    }
+
+    &:last-child  {
+      padding-top: 80px;
+
+      .infrastructure__list-small {
+        line-height: 40px;
+      }
+    }
+
   }
 
   &__list-title {
@@ -46,11 +127,13 @@
     gap: 12px;
     align-items: flex-end;
     color: $color-fallow;
+
+    @include vp-1023 {
+      gap: 10px;
+    }
   }
 
-  &__list-icon {
-    display: none;
-  }
+
 
   &__list-digit {
     font-family: $ff-tenor;
@@ -58,6 +141,10 @@
     font-size: 48px;
     line-height: 100%;
     letter-spacing: 0;
+
+    @include vp-1023 {
+      font-size: 40px;
+    }
   }
 
   &__list-small {
@@ -66,13 +153,32 @@
     font-size: 20px;
     line-height: 30px;
     text-transform: uppercase;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
-  &__list-text  {
+  &__list-text {
+    display: block;
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 0;
     text-align: center;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__list-icon {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+    }
   }
 
 
