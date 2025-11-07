@@ -17,6 +17,7 @@
     color: $color-white;
     font-size: 18px;
     line-height: 26px;
+    letter-spacing: 0;
 
     @include vp-1023  {
       font-size: 14px;
