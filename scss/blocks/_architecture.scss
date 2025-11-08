@@ -1,5 +1,5 @@
 .architecture {
-  padding-bottom: 146px;
+  padding-bottom: 120px;
 
   @include vp-1023  {
     padding-bottom: 80px;
@@ -20,9 +20,10 @@
     }
 
     @include vp-767 {
+      max-width: 295px;
       flex-direction: column;
       gap: 15px;
-      margin: 0 0 40px;
+      margin: 0 auto 38px;
     }
   }
 
@@ -42,7 +43,7 @@
       line-height: 30px;
     }
 
-    @include vp-1023  {
+    @include vp-767  {
       width: 100%;
       font-size: 20px;
       line-height: 24px;
@@ -52,16 +53,18 @@
 
   &__descr  {
     margin: 0;
-    width: calc(100% / 3);
+    max-width: 400px;
     font-size: 18px;
     line-height: 26px;
 
     @include vp-1023  {
+      max-width: 230px;
       font-size: 14px;
       line-height: 20px;
     }
 
     @include vp-767 {
+      max-width: unset;
       width: 100%;
       text-align: center
     }
@@ -99,34 +102,16 @@
     }
   }
 
+
   &__picture  {
-    width: 100%;
-    margin: 0 0 20px;
-    border-bottom-left-radius: 600px;
-    border-bottom-right-radius: 600px;
-    overflow: hidden;
+    margin: 0;
 
-    &--even {
-      border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 600px;
-    border-top-right-radius: 600px;
-    }
-
-    /*@include vp-767 {
+    @include vp-767 {
       min-height: 285px;
-    }*/
-
+    }
   }
 
-  &__img  {
-    width: 100%;
-    /*height: 100%;*/
-    object-fit: cover;
-    flex-shrink: 0;
-  }
-
-  &__item-title {
+  &__picture-caption  {
     font-family: $ff-tenor;
     margin: 0;
     font-weight: 400;
@@ -147,5 +132,23 @@
       line-height: 16px;
     }
   }
+
+  &__img  {
+    margin: 0 0 20px;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    flex-shrink: 0;
+
+    @include vp-1023  {
+      height: 410px;
+    }
+
+    @include vp-767 {
+      height: 285px;
+    }
+  }
+
+
 
 }

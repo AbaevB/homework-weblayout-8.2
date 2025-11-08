@@ -1,31 +1,42 @@
 .infrastructure {
-  padding: 120px 0 120px;
+  margin: 0 0 120px;
+  padding-top: 120px;
 
-  @include vp-1023  {
-    padding: 80px 0;
+  @include vp-1023 {
+    margin: 0 0 80px;
+    padding-top: 80px;
   }
 
-  @include vp-767{
-    padding: 60px 0;
+  @include vp-767 {
+    margin: 0 0 25px;
+    padding-top: 60px;
   }
 
-  &__inner  {
+
+
+  &__inner {
     display: grid;
     grid-template-columns: 1fr 400px;
     gap: 168px;
 
-    @include vp-1023  {
+    @include vp-1023 {
       display: flex;
       flex-direction: column;
       gap: 80px;
     }
+
+    @include vp-767 {
+      gap: 40px;
+    }
   }
 
-  &__left {
-    padding: 120px 0 120px;
 
-    @include vp-1023  {
-    padding: 0;
+
+  &__left {
+    padding: 162px 0;
+
+    @include vp-1023 {
+      padding: 0;
     }
   }
 
@@ -35,139 +46,226 @@
     font-size: 18px;
     line-height: 26px;
 
-    @include vp-1023  {
+    @include vp-1023 {
+      margin: 0 0 20px;
       font-size: 14px;
       line-height: 20px;
-      margin: 0 0 20px;
-    }
-  }
-
-  &__list {
-    @include list-reset;
-    columns: 2;
-    column-gap: 44px;
-
-    @include vp-1023  {
-      column-gap: 44px;
-
     }
 
     @include vp-767 {
-      columns: 1;
-    }
-  }
-
-  &__item {
-    position: relative;
-    font-size: 18px;
-    line-height: 20px;
-    padding: 0 0 0 16px;
-
-    @include vp-1023  {
-      font-size: 14px;
-      line-height: 20px;
-
-    }
-
-    &:not(:last-child)  {
       margin: 0 0 15px;
-
-      @include vp-1023  {
-        margin: 0 0 10px;
-      }
-    }
-
-    &::before{
-      @include pseudo;
-      width: 6px;
-      height: 6px;
-      border-radius: 100%;
-      background-color: $color-fallow;
-      top: 5px;
-      left: 0;
-
-
     }
   }
 
-  &__info-list  {
-    width: 100%;
+  &__bulleted-list {
+    columns: 2;
+    column-gap: 44px;
+
+    @include vp-1023 {
+      column-gap: 74px;
+    }
+
+    @include vp-767 {
+      max-width: 294px;
+      columns: unset;
+    }
+  }
+
+  .arc {
+    padding-top: 100px;
+
+    @include vp-1023 {
+      border-radius: unset;
+      padding: 0;
+      border: none;
+    }
+  }
+
+
+  &__list {
     @include list-reset;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
-    padding: 100px 0;
-    border: 1px solid $color-fallow;
-    border-bottom: none;
-    border-top-left-radius: 600px;
-    border-top-right-radius: 600px;
+    max-width: 200px;
 
-    @include vp-1023  {
+    @include vp-1023 {
+      max-width: unset;
+      width: 100%;
       flex-direction: row;
-      border: none;
-      padding: 0;
+      align-items: start;
       gap: 40px;
     }
 
     @include vp-767 {
+      width: 280px;
       flex-wrap: wrap;
+      row-gap: 20px;
     }
   }
 
-  &__info-item  {
-    max-width: 192px;
+  &__list-item {
+    width: 192px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    &:first-child {
-      justify-content: flex-start;
 
-      @include vp-767 {
-        justify-content: flex-end;
-        padding-bottom: 10px;
-      }
+    @include vp-1023  {
+      width: 150px;
     }
 
-    &:last-child{
-      @include vp-1023  {
-        justify-content: flex-end;
-        @include vp-767{
-          justify-content: flex-start;
+
+    @include vp-767 {
+      width: 120px;
+    }
+
+
+
+    &--1 {
+
+      margin: 0 0 50px;
+
+
+
+      @include vp-1023 {
+        margin: 0;
+        width: 155px;
+
+      }
+
+      @include vp-767 {
+        margin: 0 0 20px;
+        width: 120px;
+        padding-top: 70px;
+      }
+
+      .infrastructure__list-icon {
+        @include vp-1023 {
+          margin: 0 0 20px;
+        }
+
+        @include vp-767 {
+          margin: 0 0 10px;
+        }
+      }
+
+      .infrastructure__list-title {
+        margin: 0 0 10px;
+
+        @include vp-767 {
+          margin: 0;
         }
       }
     }
 
-    @include vp-1023  {
-      max-width: unset;
-      width: calc((100% - (40px * 3)) / 4);
-      min-height: 150px;
-      justify-content: space-between;
+    &--2  {
+      margin: 0 0 60px;
+      gap: 10px;
+
+
+
+      @include vp-1023  {
+        margin: 0;
+        gap: 0;
+
+
+        .infrastructure__list-top  {
+          padding-top: 20px;
+          margin: 0 0 20px;
+        }
+
+        .infrastructure__list-title {
+          margin: 0 0 10px;
+        }
+      }
+
+
+
+
+      @include vp-767 {
+
+        .infrastructure__list-top {
+          margin: 0 0 10px;
+        }
+
+        .infrastructure__list-title {
+          margin: 0;
+        }
+      }
+
 
     }
 
-    @include vp-767 {
-      width: calc((100% - 40px) / 2);
+
+    &--3  {
+
+      margin: 0 0 50px;
+
+      gap: 10px;
+
+      .infrastructure__list-text  {
+        margin: 0 0 10px;
+      }
+
+      @include vp-1023  {
+        margin: 0;
+      }
+
+      @include vp-767 {
+        padding-bottom: 20px;
+        gap: 0;
+      }
+
+
     }
+
+
+    &--4 {
+      gap: 10px;
+
+      @include vp-1023  {
+        padding-top: 80px;
+      }
+
+
+
+      @include vp-767 {
+        padding-top: 80px;
+        padding: 0;
+        gap: 0;
+      }
+
+
+    }
+
 
 
   }
 
-  &__info-title {
-    font-family: $ff-tenor;
+  &__list-title {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
     color: $color-fallow;
+
+    @include vp-1023 {
+      gap: 10px;
+    }
   }
 
-  &__info-digit {
+
+
+  &__list-digit {
+    font-family: $ff-tenor;
     font-weight: 400;
     font-size: 48px;
-    line-height: 48px;
+    line-height: 100%;
     letter-spacing: 0;
+    text-align: center;
 
-    @include vp-1023  {
+    @include vp-1023 {
       font-size: 40px;
-      line-height: 40px;
     }
 
     @include vp-767 {
@@ -176,49 +274,41 @@
     }
   }
 
-  &__info-small {
+  &__list-small {
+    font-family: $ff-tenor;
+    font-weight: 400;
     font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0;
+    line-height: 30px;
+    text-transform: uppercase;
 
-    @include vp-1023  {
+    @include vp-1023 {
       font-size: 14px;
-      line-height: 18px;
-    }
-
-    @include vp-767{
-     font-size: 14px;
-     line-height: 18px;
+      line-height: 24px;
     }
   }
 
-  &__info-icon  {
-    display: none;
-
-    @include vp-1023  {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      flex-shrink: 0;
-    }
-  }
-
-  &__info-text  {
+  &__list-text {
+    display: block;
     font-size: 18px;
     line-height: 26px;
-    text-align: center;
     letter-spacing: 0;
+    text-align: center;
 
-    @include vp-1023{
+    @include vp-1023 {
       font-size: 14px;
       line-height: 20px;
     }
 
-    @include vp-767{
-      max-width: 120px;
-    }
+
   }
 
+  &__list-icon {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+    }
+  }
 
 
 }

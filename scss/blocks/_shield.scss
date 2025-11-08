@@ -1,0 +1,17 @@
+.shield {
+  height: 100%;
+  overflow: hidden;
+
+  &--bottom {
+    border-bottom-left-radius: 600px;
+    border-bottom-right-radius: 600px;
+  }
+
+  &--top {
+    border-top-left-radius: 600px;
+    border-top-right-radius: 600px;
+  }
+
+
+
+}

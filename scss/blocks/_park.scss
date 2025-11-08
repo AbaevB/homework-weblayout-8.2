@@ -1,5 +1,5 @@
 .park {
-  padding-bottom: 120px;
+   padding-bottom: 120px;
 
   @include vp-1023  {
     padding-bottom: 80px;
@@ -9,13 +9,14 @@
     padding-bottom: 60px;
   }
 
-  &__inner {
+  &__inner  {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 700px 1fr;
     column-gap: 173px;
     row-gap: 120px;
 
     @include vp-1023  {
+      grid-template-columns: 340px 1fr;
       column-gap: 48px;
       row-gap: 80px;
     }
@@ -28,86 +29,56 @@
     }
   }
 
-  &__picture {
-    width: 100%;
+  &__left {
+
+    @include vp-1023  {
+      padding-top: 15px;
+    }
 
     @include vp-767 {
-      margin: 0 0 40px;
+      margin-bottom: 41px;
     }
   }
 
-  &__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  &__right  {
+    padding-top: 110px;
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    @include vp-1023  {
+      padding-top: 0;
+    }
 
     @include vp-767 {
       margin: 0 0 60px;
     }
   }
 
-  &__title {
+  &__title  {
     max-width: 440px;
     margin: 0 0 30px;
     font-family: $ff-tenor;
     font-weight: 400;
     font-size: 34px;
     line-height: 44px;
+    letter-spacing: -0.08em;
     text-transform: uppercase;
     color: $color-fallow;
 
     @include vp-1023  {
+      margin: 0 0 20px;
       font-size: 24px;
       line-height: 30px;
-      margin: 0 0 20px;
     }
 
     @include vp-767 {
+      margin: 0 0 14px;
       font-size: 20px;
       line-height: 24px;
     }
   }
 
-  &__list {
-  @include list-reset;
-    gap: 15px;
-
-    @include vp-1023  {
-      gap: 10px;
-    }
+  &__bulleted-list  {
+    width: 100%;
   }
-
-  &__item {
-    position: relative;
-    padding: 0 0 0 20px;
-    font-size: 18px;
-    line-height: 26px;
-
-    @include vp-1023  {
-      font-size: 14px;
-      line-height: 20px;
-    }
-
-    &::before {
-      @include pseudo;
-      width: 6px;
-      height: 6px;
-      border-radius: 100%;
-      background-color: $color-fallow;
-      top: 10px;
-      left: 0;
-    }
-  }
-
-
-
 
   &__bottom {
     position: relative;
@@ -117,44 +88,22 @@
     align-items: center;
   }
 
-  &__arrow {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-
-    &::before {
-      @include pseudo;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-      height: 1px;
-      background-color: $color-fallow;
-      /*z-index: 20;*/
-    }
-  }
-
   &__square {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 27px;
     align-items: center;
     padding: 0 84px;
     background-color: $color-rustic-red;
 
     @include vp-1023  {
       gap: 20px;
-      padding: 0 44px;
+      padding: 0 33px;
     }
 
     @include vp-767 {
-      padding: 0 30px;
+      padding: 0 6px;
     }
   }
 
@@ -189,10 +138,12 @@
   }
 
   &__square-small {
+    padding-top: 70px;
     display: block;
     font-size: 34px;
-    line-height: 44px;
+    line-height: 100%;
     letter-spacing: 0;
+    text-transform: uppercase;
 
     @include vp-1023  {
       padding-top: 21px;
@@ -208,10 +159,42 @@
   &__square-text {
     font-size: 18px;
     line-height: 26px;
+    letter-spacing: 0;
+    text-align: center;
 
     @include vp-1023  {
      font-size: 14px;
      line-height: 20px;
     }
   }
+
+  &__arrow {
+    position: absolute;
+    left: 0;
+    top: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+     &::before {
+      @include pseudo;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 1px;
+      background-color: $color-fallow;
+
+    }
+
+    @include vp-1023  {
+      top: 28px;
+    }
+
+    @include vp-767 {
+      top: 19px;
+    }
+  }
+
 }
