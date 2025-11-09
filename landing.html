@@ -104,14 +104,16 @@
       </div>
     </section>
     <section class="cover">
-      <h2 class="visually-hidden">
-          Вид на Фрунзенскую набережную со стороы Москва-реки
-      </h2>
-
-      <source media="(max-width: 768px)" srcset="images/cover-img-mobile.jpg, images/cover-img-mobile@2x.jpg 2x">
-      <source media="(max-width: 1023px)" srcset="images/cover-img-tablet.jpg 1x, images/cover-img-tablet@2x.jpg 2x">
-      <img class="cover__img" src="images/cover-img.jpg" alt="Вид на Фрунзенскую набережную со стороы Москва-реки" srcset="images/cover-img@2x.jpg">
-
+      <div class="cover__inner">
+        <h2 class="visually-hidden">
+            Вид на Фрунзенскую набережную со стороы Москва-реки
+        </h2>
+        <picture class="cover__picture">
+          <source media="(max-width: 768px)" srcset="images/cover-img-mobile.jpg, images/cover-img-mobile@2x.jpg 2x">
+          <source media="(max-width: 1023px)" srcset="images/cover-img-tablet.jpg 1x, images/cover-img-tablet@2x.jpg 2x">
+          <img class="cover__img" src="images/cover-img.jpg" alt="Вид на Фрунзенскую набережную со стороы Москва-реки" srcset="images/cover-img@2x.jpg">
+        </picture>
+      </div>
 
     </section>
     <section class="infrastructure">
@@ -340,7 +342,7 @@
         <ul class="architecture__list">
           <li class="architecture__item">
             <figure class="architecture__picture">
-              <img class="architecture__img shield shield--bottom"  src="images/architecture-image-1.jpg" srcset="images/architecture-image-1@2x.jpg 2x" alt="Стеклянные башни" >
+              <img class="architecture__img shield shield--bottom" src="images/architecture-image-1.jpg" srcset="images/architecture-image-1@2x.jpg 2x" alt="Стеклянные башни">
               <figcaption class="architecture__picture-caption">
                 стеклянные башн в&nbsp;современном стиле
               </figcaption>
@@ -349,7 +351,7 @@
           </li>
           <li class="architecture__item">
             <figure class="architecture__picture architecture__picture--even">
-              <img class="architecture__img shield shield--top"  src="images/architecture-image-2.jpg" srcset="images/architecture-image-2@2x.jpg 2x" alt="Сталинский ампир" >
+              <img class="architecture__img shield shield--top" src="images/architecture-image-2.jpg" srcset="images/architecture-image-2@2x.jpg 2x" alt="Сталинский ампир">
               <figcaption class="architecture__picture-caption">
                 величественный дом в&nbsp;стиле сталинский ампир с&nbsp;видами на&nbsp;набережную
               </figcaption>
@@ -358,7 +360,7 @@
           </li>
           <li class="architecture__item">
             <figure class="architecture__picture">
-              <img class="architecture__img shield shield--bottom"  src="images/architecture-image-3.jpg" srcset="images/architecture-image-3@2x.jpg 2x" alt="Дома в стиле авангард" >
+              <img class="architecture__img shield shield--bottom" src="images/architecture-image-3.jpg" srcset="images/architecture-image-3@2x.jpg 2x" alt="Дома в стиле авангард">
               <figcaption class="architecture__picture-caption">
                 дома в&nbsp;стиле авангард вокруг центрального парка
               </figcaption>
@@ -395,7 +397,7 @@
             </li>
             <li class="apartments__item">
               <div class="apartments__picture shield shield--bottom">
-                <img class="apartments__img" src="images/apartments-image.jpg"  srcset="images/apartments-image@2x.jpg 2x" alt="Квартира, интерьер">
+                <img class="apartments__img" src="images/apartments-image.jpg" srcset="images/apartments-image@2x.jpg 2x" alt="Квартира, интерьер">
               </div>
             </li>
           </ul>
@@ -409,8 +411,8 @@
         </h2>
         <picture class="decorative__picture">
           <source media="(max-width: 768px)" srcset="images/decorative-bg-mobile.jpg 1x, images/decorative-bg-mobile@2x.jpg 2x">
-          <source media="(max-width: 1023px)" srcset="images/decorative-bg-tablet.jpg 1x, images/decorative-bg@2x.jpg 2x" >
-          <img class="decorative__img" src="images/cover-img.jpg"  srcset="images/decorative-bg@2x.jpg 2x" alt="Фрунзенская набережная интерьер - ресепшн">
+          <source media="(max-width: 1023px)" srcset="images/decorative-bg-tablet.jpg 1x, images/decorative-bg@2x.jpg 2x">
+          <img class="decorative__img" src="images/cover-img.jpg" srcset="images/decorative-bg@2x.jpg 2x" alt="Фрунзенская набережная интерьер - ресепшн">
         </picture>
       </div>
     </section>

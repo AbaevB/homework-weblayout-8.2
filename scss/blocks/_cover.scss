@@ -1,6 +1,5 @@
 .cover  {
    height: 740px;
-   overflow: hidden;
 
    @include vp-1023 {
     height: 460px;
@@ -10,9 +9,14 @@
     height: 300px;
    }
 
+   &__inner {
+     width: 100%;
+    height: 100%;
+    overflow: hidden;
+   }
+
     &__picture {
     width: 100%;
-    height: 100%;
   }
 
   &__img {
