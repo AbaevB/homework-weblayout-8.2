@@ -15,9 +15,12 @@
     column-gap: 173px;
     row-gap: 120px;
 
+    @media(max-width: 1370px) {
+      column-gap: 48px;
+    }
+
     @include vp-1023  {
       grid-template-columns: 340px 1fr;
-      column-gap: 48px;
       row-gap: 80px;
     }
 
