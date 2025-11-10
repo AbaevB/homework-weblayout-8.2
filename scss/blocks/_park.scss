@@ -33,14 +33,23 @@
   }
 
   &__left {
+    width: 100%;
+    min-height: 700px;
+    overflow: hidden;
 
     @include vp-1023  {
+      min-height: 340px;
       padding-top: 15px;
     }
 
     @include vp-767 {
       margin-bottom: 41px;
     }
+  }
+
+  &__img  {
+    width: 100%;
+    object-fit: cover;
   }
 
   &__right  {

@@ -3,7 +3,7 @@
   padding-top: 120px;
 
   @include vp-1023 {
-    margin: 0 0 80px;
+    margin: 0 0 68px;
     padding-top: 80px;
   }
 
@@ -113,7 +113,7 @@
     }
   }
 
-  &__list-item  {
+  &__list-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,9 +125,9 @@
       }
     }
 
-    &:last-child  {
-      @include vp-1023  {
-        padding-top: 20px;
+    &:last-child {
+      @include vp-1023 {
+        padding-top: 80px;
       }
 
       @include vp-767 {
@@ -135,9 +135,9 @@
       }
     }
 
-    @include vp-1023  {
+    @include vp-1023 {
       width: calc((100% - (40px * 3)) / 4);
-      gap: 8px;
+      gap: 11px;
     }
 
     @include vp-767 {
@@ -149,17 +149,17 @@
   &__list-top {
     display: none;
 
-    @include vp-1023  {
+    @include vp-1023 {
       margin: 0 0 7px;
       display: block;
       padding-top: 18px;
     }
   }
 
-  &__list-bottom  {
+  &__list-bottom {
     display: none;
 
-    @include vp-1023  {
+    @include vp-1023 {
       display: block;
       padding-bottom: 5px;
     }
@@ -219,7 +219,10 @@
     text-align: center;
 
     &--mb {
-      margin: 0 0 11px;
+      @include vp-1023 {
+        margin: 0 0 11px;
+      }
+
     }
 
     @include vp-1023 {
