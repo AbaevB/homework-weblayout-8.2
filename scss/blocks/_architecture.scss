@@ -103,15 +103,15 @@
   }
 
 
-  &__picture  {
+  &__figure  {
     margin: 0;
 
-    @include vp-767 {
+    /* @include vp-767 {
       min-height: 285px;
-    }
+    } */
   }
 
-  &__picture-caption  {
+  &__figure-caption  {
     font-family: $ff-tenor;
     margin: 0;
     font-weight: 400;
