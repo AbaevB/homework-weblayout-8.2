@@ -72,7 +72,10 @@
   }
 
   .arc {
-    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 20px;
 
     @include vp-1023 {
       border-radius: unset;
@@ -88,6 +91,7 @@
     flex-direction: column;
     align-items: center;
     max-width: 200px;
+    gap: 60px;
 
     @include vp-1023 {
       max-width: unset;
@@ -104,7 +108,22 @@
     }
   }
 
-  &__list-item {
+  &__list-item  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__list-top {
+    display: none;
+  }
+
+  &__list-bottom  {
+    display: none;
+  }
+
+  /* &__list-item {
     width: 192px;
     display: flex;
     flex-direction: column;
@@ -241,7 +260,7 @@
 
 
 
-  }
+  } */
 
   &__list-title {
     display: flex;
@@ -302,13 +321,7 @@
 
   }
 
-  &__list-icon {
-    display: none;
 
-    @include vp-1023 {
-      display: block;
-    }
-  }
 
 
 }
