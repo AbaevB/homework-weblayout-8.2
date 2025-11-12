@@ -1,12 +1,12 @@
 .cover  {
-   height: 740px;
+   min-height: 740px;
 
    @include vp-1023 {
-    height: 460px;
+    min-height: 460px;
    }
 
    @include vp-767  {
-    height: 300px;
+    min-height: 300px;
    }
 
    &__inner {
@@ -21,8 +21,16 @@
 
   &__img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 740px;
+
+
+    @include vp-1023 {
+    height: 460px;
+   }
+
+   @include vp-767  {
+    height: 300px;
+   }
   }
 
 
