@@ -88,7 +88,41 @@
     }
   }
 
+  &__list {
+     margin: 0;
+  padding-inline-start: 17px;
+  color: $color-fallow;
 
+
+  @include vp-767 {
+    padding-inline-start: 16px;
+  }
+
+  &-item {
+    &:not(:last-child){
+      margin: 0 0 15px;
+
+      @include vp-1023  {
+        margin: 0 0 10px;
+      }
+    }
+  }
+
+  &-text {
+    color: $color-white;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0;
+
+    @include vp-1023  {
+      font-size: 14px;
+      line-height: 20px;
+
+    }
+  }
+
+
+  }
 
   &__bottom {
     position: relative;

@@ -107,9 +107,16 @@
     margin: 0;
   }
 
+  &__picture  {
+    display: block;
+    margin: 0 0 21px;
+  }
+
   &__figure-caption  {
+    display: block;
+    margin: 0 auto;
+    max-width: 360px;
     font-family: $ff-tenor;
-    margin: 0;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
