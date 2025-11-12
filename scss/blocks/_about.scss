@@ -1,5 +1,4 @@
 .about {
-  //margin: 0 0 120px;
   padding: 120px 0;
 
   @include vp-1023 {
@@ -81,5 +80,7 @@
       line-height: 24px;
     }
   }
+
+
 
 }
